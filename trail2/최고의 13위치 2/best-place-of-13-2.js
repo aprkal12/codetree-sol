@@ -14,12 +14,15 @@ for (let i = 0; i < n; i++) {
         }
         let midcount = 0;
         for (let k = 0; k < n; k++) {
-            if (i === k && j + 6 <= n) {
-                for (let l = j + 3; l < j + 6; l++) {
-                    midcount += grid[k][l] > 0 ? 1 : 0;
+            if (i === k) {
+                for (let l = j + 3; l < n - 2; l++) {
+                    for (let m = 0; m < 3; m++) {
+                        midcount += grid[k][l + m] > 0 ? 1 : 0;
+                    }
+                    result = Math.max(result, count + midcount)
+                    midcount = 0;
                 }
-                result = Math.max(result, count + midcount)
-                midcount = 0;
+
             }
             if (i < k) {
                 for (let l = 0; l < n - 2; l++) {
