@@ -6,9 +6,8 @@ const h = input.slice(1, 1 + n).map(Number);
 
 // Please Write your code here.
 let maxh = Math.max(0, ...h);
-let minh = Math.min(0, ...h);
 let result = 0;
-for (let i = minh; i < maxh; i++) {
+for (let i = 0; i < maxh; i++) {
     let count = 0;
     let block = false;
     for (let j = 0; j < n; j++) {
