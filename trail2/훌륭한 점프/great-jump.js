@@ -21,7 +21,7 @@ for (let i = 0; i < n; i++) {
     }
     if (cur === n - 1) {
         maxList.push(Math.max(...stones))
-        result = Math.min(result, ...maxList);
     }
 }
+result = Math.min(result, ...maxList);
 console.log(result)
